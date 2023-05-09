@@ -56,7 +56,11 @@
 ```
 
 2. Создайте образ докера:
-`docker build -t go-vk-bot .`
+```shell
+docker build -t go-vk-bot .
+```
 
 3. Запустите докер контейнер:
-`docker run -v /путь/к/вашему/.env:/app/.env go-vk-bot`
+```
+docker run -v /путь/к/вашему/.env:/app/.env go-vk-bot
+```
