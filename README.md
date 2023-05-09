@@ -10,6 +10,8 @@
 - Получить фото кота!: Бот отсылает сообщение с фотографией кота.
 - Забронировать столик: Бот отсылает сообщение с выбором времени для бронирования столика с 4 inline кнопками. После выбора времени высылается сообщение - подтверждение с 2 inline кнопками.
 
+Картинки можно посмотреть снизу страницы
+
 ## Структра бота
 
 ```
@@ -66,3 +68,8 @@ docker build -t go-vk-bot .
 ```
 docker run -v /путь/к/вашему/.env:/app/.env go-vk-bot
 ```
+
+## Картинки
+<img src="https://github.com/AlexS778/goVKBot/blob/master/pics/bookatable.png" alt="book a table screenshot" style="height: 500px; width:667px;"/>
+<img src="https://github.com/AlexS778/goVKBot/blob/master/pics/cat.png" alt="cat screenshot" style="height: 500px; width:667px;"/>
+<img src="https://github.com/AlexS778/goVKBot/blob/master/pics/weather.png" alt="weather screenshot" style="height: 500px; width:667px;"/>
