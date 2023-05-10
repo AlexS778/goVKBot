@@ -40,6 +40,7 @@ type ServerResponse struct {
 			EventID               string `json:"event_id"`
 		} `json:"object"`
 	} `json:"updates"`
+	Failed int `json:"failed,omitempty"`
 }
 
 // Keyboard struct that is being sent with message

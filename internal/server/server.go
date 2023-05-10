@@ -38,6 +38,13 @@ func ListenForResponses(b bot.Bot, responseChan chan<- models.ServerResponse) {
 		json.Unmarshal(body, &updateResponseData)
 		b.LastTimeStamp = updateResponseData.Ts
 
+		// TODO: better error handling
+		// "failed":2 — the key has expired
+		// you need to get the key again using the groups.getLongPollServer method.
+		if updateResponseData.Failed == 2 {
+			b.GetLongPollServer()
+			baseUrl = b.ServerUrl
+		}
 		resp.Body.Close()
 
 		responseChan <- updateResponseData
